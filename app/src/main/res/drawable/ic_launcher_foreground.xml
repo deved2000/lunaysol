@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sonne (links oben) und Mondsichel (rechts unten) im 108dp-Raster -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Sonnenstrahlen -->
+    <path
+        android:fillColor="#FFFF9800"
+        android:pathData="M44,26 L47,33 L41,33 Z M44,62 L41,55 L47,55 Z M26,44 L33,41 L33,47 Z M62,44 L55,47 L55,41 Z
+            M31.3,31.3 L37.6,35.6 L35.6,37.6 Z M56.7,56.7 L50.4,52.4 L52.4,50.4 Z
+            M56.7,31.3 L52.4,37.6 L50.4,35.6 Z M31.3,56.7 L35.6,50.4 L37.6,52.4 Z" />
+    <!-- Sonnenscheibe -->
+    <path
+        android:fillColor="#FFFFD54F"
+        android:pathData="M44,34 A10,10 0 1,1 43.99,34 Z" />
+    <!-- Mondsichel -->
+    <path
+        android:fillColor="#FFE0E0E0"
+        android:pathData="M68,46 A18,18 0 1,0 82,80 A14,14 0 1,1 68,46 Z" />
+</vector>
