@@ -33,5 +33,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: LunaSolCal-debug
+          name: LunaYSol-debug
           path: app/build/outputs/apk/debug/*.apk
