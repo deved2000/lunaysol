@@ -49,10 +49,10 @@ jobs:
           export VERSION_NAME="${GITHUB_REF_NAME#v}"
           export VERSION_CODE="${{ github.run_number }}"
           ./gradlew assembleRelease
-          cp app/build/outputs/apk/release/app-release.apk "LunaSolCal-${VERSION_NAME}.apk"
+          cp app/build/outputs/apk/release/app-release.apk "LunaYSol-${VERSION_NAME}.apk"
 
       - name: Create GitHub release with APK
         uses: softprops/action-gh-release@v2
         with:
-          files: LunaSolCal-*.apk
+          files: LunaYSol-*.apk
           generate_release_notes: true
