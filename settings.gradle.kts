@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "LunaSolCal"
+rootProject.name = "LunaYSol"
 include(":app")

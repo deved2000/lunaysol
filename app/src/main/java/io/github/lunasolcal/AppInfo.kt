@@ -7,7 +7,7 @@ object AppInfo {
     const val FAQ_URL = "$REPO_URL/blob/main/docs/FAQ.md"
 
     val PRIVACY_TEXT = """
-        LunaSolCal sammelt keine persönlichen Daten und enthält weder Werbung noch Tracking.
+        Luna y Sol sammelt keine persönlichen Daten und enthält weder Werbung noch Tracking.
 
         Alle astronomischen Berechnungen laufen vollständig offline auf deinem Gerät.
 
@@ -22,7 +22,7 @@ object AppInfo {
     """.trimIndent()
 
     fun aboutText() = """
-        LunaSolCal ${BuildConfig.VERSION_NAME}
+        Luna y Sol ${BuildConfig.VERSION_NAME}
 
         Sonnen- und Mondkalender für jeden Ort der Welt: Auf- und Untergänge, Dämmerung, Mondphasen, Perigäum/Apogäum, Jahreszeiten sowie Sonnen- und Mondfinsternisse.
 

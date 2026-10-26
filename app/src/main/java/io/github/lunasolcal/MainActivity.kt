@@ -9,7 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import io.github.lunasolcal.ui.AppViewModel
 import io.github.lunasolcal.ui.screens.MainScreen
-import io.github.lunasolcal.ui.theme.LunaSolCalTheme
+import io.github.lunasolcal.ui.theme.LunaYSolTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
         )
         super.onCreate(savedInstanceState)
         setContent {
-            LunaSolCalTheme {
+            LunaYSolTheme {
                 MainScreen(vm)
             }
         }

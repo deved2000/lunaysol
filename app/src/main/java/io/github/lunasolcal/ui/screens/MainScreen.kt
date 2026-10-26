@@ -114,7 +114,7 @@ fun MainScreen(vm: AppViewModel) {
         // ---- App-Leiste
         Column(Modifier.fillMaxWidth().background(AppColors.TopBar).statusBarsPadding()) {
             Row(Modifier.fillMaxWidth().height(64.dp), verticalAlignment = Alignment.CenterVertically) {
-                Text("LunaSolCal", color = Color.White, fontSize = 26.sp, fontWeight = FontWeight.Medium, modifier = Modifier.padding(start = 20.dp).weight(1f))
+                Text("Luna y Sol", color = Color.White, fontSize = 26.sp, fontWeight = FontWeight.Medium, modifier = Modifier.padding(start = 20.dp).weight(1f))
                 BarIcon(Icons.Filled.Share, "Teilen", Color.White) { share(context, vm) }
                 BarIcon(Icons.Filled.Update, "Jetzt", if (vm.followNow) Color.White else AppColors.Yellow) { vm.resetToNow() }
                 Box {
@@ -124,7 +124,7 @@ fun MainScreen(vm: AppViewModel) {
                         val items = listOf(
                             item("Position aktual. (GPS)") { startGps() },
                             item("Orte importieren") { importer.launch(arrayOf("application/json", "text/plain", "*/*")) },
-                            item("Orte exportieren") { exporter.launch("lunasolcal-orte.json") },
+                            item("Orte exportieren") { exporter.launch("lunaysol-orte.json") },
                             item("Datum") { pickDateTime(context, vm) },
                             item("Zeitzone") { dialog = Dialog.TIMEZONE },
                             item("Einstellungen") { dialog = Dialog.SETTINGS },
@@ -160,7 +160,7 @@ fun MainScreen(vm: AppViewModel) {
         Dialog.TIMEZONE -> TimezoneDialog(vm) { dialog = Dialog.NONE }
         Dialog.SETTINGS -> SettingsDialog(vm) { dialog = Dialog.NONE }
         Dialog.PRIVACY -> InfoDialog("Datenschutz", AppInfo.PRIVACY_TEXT) { dialog = Dialog.NONE }
-        Dialog.ABOUT -> InfoDialog("Über LunaSolCal", AppInfo.aboutText()) { dialog = Dialog.NONE }
+        Dialog.ABOUT -> InfoDialog("Über Luna y Sol", AppInfo.aboutText()) { dialog = Dialog.NONE }
         Dialog.NONE -> {}
     }
 }
@@ -208,7 +208,7 @@ private fun share(context: Context, vm: AppViewModel) {
         appendLine("Mondaufgang: ${Fmt.time(md.rise?.jd, zone)}")
         appendLine("Monduntergang: ${Fmt.time(md.set?.jd, zone)}")
         appendLine("Mondphase: ${ph.name} (${Fmt.percent(st.illumination)})")
-        append("— LunaSolCal")
+        append("— Luna y Sol")
     }
     val intent = Intent(Intent.ACTION_SEND).apply { type = "text/plain"; putExtra(Intent.EXTRA_TEXT, text) }
     context.startActivity(Intent.createChooser(intent, "Teilen"))

@@ -35,6 +35,6 @@ private val scheme = darkColorScheme(
 )
 
 @Composable
-fun LunaSolCalTheme(content: @Composable () -> Unit) {
+fun LunaYSolTheme(content: @Composable () -> Unit) {
     MaterialTheme(colorScheme = scheme, content = content)
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.LunaSolCal" parent="android:Theme.Material.NoActionBar">
+    <style name="Theme.LunaYSol" parent="android:Theme.Material.NoActionBar">
         <item name="android:windowBackground">@color/navy</item>
         <item name="android:statusBarColor">@color/top_bar</item>
         <item name="android:navigationBarColor">@color/navy</item>

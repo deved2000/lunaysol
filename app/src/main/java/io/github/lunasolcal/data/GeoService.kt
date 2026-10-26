@@ -32,7 +32,7 @@ object GeoService {
         val conn = URL(url).openConnection() as HttpURLConnection
         conn.connectTimeout = 10_000
         conn.readTimeout = 10_000
-        conn.setRequestProperty("User-Agent", "LunaSolCal-Android")
+        conn.setRequestProperty("User-Agent", "LunaYSol-Android")
         try {
             if (conn.responseCode !in 200..299) throw java.io.IOException("HTTP ${conn.responseCode}")
             return conn.inputStream.bufferedReader().use { it.readText() }

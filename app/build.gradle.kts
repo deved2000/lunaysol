@@ -9,7 +9,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "io.github.lunasolcal"
+        applicationId = "io.github.deved2000.lunaysol"
         minSdk = 26
         targetSdk = 35
         // Beim Release-Build setzt GitHub Actions diese Werte aus dem Git-Tag (z. B. v1.2.0)

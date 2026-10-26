@@ -1,4 +1,4 @@
-# LunaSolCal 🌞🌙
+# Luna y Sol 🌞🌙
 
 Sonnen- und Mondkalender für Android – für **jeden Ort der Welt** und **jedes beliebige Datum und jede Uhrzeit**.
 Alle Berechnungen laufen offline direkt auf dem Gerät.
@@ -60,10 +60,10 @@ Bei jedem Push baut GitHub Actions (`.github/workflows/build.yml`) automatisch e
 ## Auf GitHub veröffentlichen
 
 ```bash
-cd LunaSolCal
+cd LunaYSol
 git init
 git add .
-git commit -m "LunaSolCal: erste Version"
+git commit -m "Luna y Sol: erste Version"
 git branch -M main
 git remote add origin https://github.com/deved2000/lunaysol.git
 git push -u origin main
@@ -80,20 +80,20 @@ Der Workflow `.github/workflows/release.yml` baut bei jedem Versions-Tag eine si
 Android installiert ein Update nur, wenn es mit **demselben Schlüssel** signiert ist. Ohne eigenen Schlüssel signiert GitHub jedes Mal mit einem neuen Zufallsschlüssel – dann muss man die App vor jedem Update deinstallieren.
 
 ```bash
-keytool -genkeypair -v -keystore release.jks -alias lunasolcal \
+keytool -genkeypair -v -keystore lunaysol.jks -alias lunaysol \
   -keyalg RSA -keysize 2048 -validity 10000
-base64 -w0 release.jks > release.jks.b64     # macOS: base64 -i release.jks -o release.jks.b64
+base64 -w0 lunaysol.jks > lunaysol.jks.b64     # macOS: base64 -i lunaysol.jks -o lunaysol.jks.b64
 ```
 
-> ⚠️ `release.jks` und die Passwörter gut aufbewahren und **niemals** ins Repository committen (steht bereits in `.gitignore`). Geht der Schlüssel verloren, können Nutzer keine Updates mehr installieren.
+> ⚠️ `lunaysol.jks` und die Passwörter gut aufbewahren und **niemals** ins Repository committen (steht bereits in `.gitignore`). Geht der Schlüssel verloren, können Nutzer keine Updates mehr installieren.
 
 Dann im Repository unter **Settings → Secrets and variables → Actions → New repository secret** vier Secrets anlegen:
 
 | Name | Inhalt |
 |---|---|
-| `SIGNING_KEYSTORE_BASE64` | Inhalt der Datei `release.jks.b64` |
+| `SIGNING_KEYSTORE_BASE64` | Inhalt der Datei `lunaysol.jks.b64` |
 | `SIGNING_STORE_PASSWORD` | Keystore-Passwort |
-| `SIGNING_KEY_ALIAS` | `lunasolcal` |
+| `SIGNING_KEY_ALIAS` | `lunaysol` |
 | `SIGNING_KEY_PASSWORD` | Schlüssel-Passwort (bei keytool meist gleich dem Keystore-Passwort) |
 
 ### 2. Version veröffentlichen
@@ -103,7 +103,7 @@ git tag v1.0.0
 git push origin v1.0.0
 ```
 
-Nach ein paar Minuten erscheint unter **Releases** die Version mit `LunaSolCal-1.0.0.apk`. Der Tag bestimmt den Versionsnamen in der App; die Versionsnummer zählt automatisch hoch.
+Nach ein paar Minuten erscheint unter **Releases** die Version mit `LunaYSol-1.0.0.apk`. Der Tag bestimmt den Versionsnamen in der App; die Versionsnummer zählt automatisch hoch.
 
 ### 3. Installieren
 
